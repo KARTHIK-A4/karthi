@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>300 Line HTML Animation Example</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      text-align: center;
+      background: linear-gradient(to right, #ece9e6, #ffffff);
+      margin: 0;
+      padding: 0;
+    }
+
+    h1 {
+      margin: 20px;
+      font-size: 2em;
+      color: #333;
+    }
+
+    .gallery {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 20px;
+      padding: 20px;
+    }
+
+    .card {
+      background: #fff;
+      border-radius: 15px;
+      padding: 15px;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+      transition: transform 0.3s;
+    }
+
+    .card:hover {
+      transform: scale(1.05);
+    }
+
+    .card img {
+      width: 100%;
+      border-radius: 10px;
+    }
+
+    .title {
+      margin-top: 10px;
+      font-weight: bold;
+      color: #444;
+    }
+
+    /* ----------------- Animations ----------------- */
+    @keyframes bounce {
+      0%, 20%, 50%, 80%, 100% {transform: translateY(0);}
+      40% {transform: translateY(-30px);}
+      60% {transform: translateY(-15px);}
+    }
+
+    @keyframes rotate {
+      0% {transform: rotate(0deg);}
+      100% {transform: rotate(360deg);}
+    }
+
+    @keyframes zoom {
+      0% {transform: scale(1);}
+      50% {transform: scale(1.2);}
+      100% {transform: scale(1);}
+    }
+
+    @keyframes fade {
+      0% {opacity: 0;}
+      100% {opacity: 1;}
+    }
+
+    @keyframes slide {
+      0% {transform: translateX(-100%);}
+      100% {transform: translateX(0);}
+    }
+
+    @keyframes shake {
+      0%, 100% {transform: translateX(0);}
+      20%, 60% {transform: translateX(-10px);}
+      40%, 80% {transform: translateX(10px);}
+    }
+
+    @keyframes pulse {
+      0% {transform: scale(1);}
+      50% {transform: scale(1.1);}
+      100% {transform: scale(1);}
+    }
+
+    @keyframes flip {
+      0% {transform: rotateY(0);}
+      100% {transform: rotateY(360deg);}
+    }
+
+    @keyframes glow {
+      0% {box-shadow: 0 0 5px #ff0000;}
+      50% {box-shadow: 0 0 20px #ff0000;}
+      100% {box-shadow: 0 0 5px #ff0000;}
+    }
+
+    @keyframes spin {
+      0% {transform: rotate(0deg);}
+      100% {transform: rotate(1080deg);}
+    }
+
+    @keyframes wave {
+      0% {transform: rotate(0deg);}
+      25% {transform: rotate(10deg);}
+      50% {transform: rotate(-10deg);}
+      75% {transform: rotate(10deg);}
+      100% {transform: rotate(0deg);}
+    }
+
+    /* Apply animations */
+    .bounce img { animation: bounce 2s infinite; }
+    .rotate img { animation: rotate 5s linear infinite; }
+    .zoom img   { animation: zoom 3s infinite; }
+    .fade img   { animation: fade 4s infinite alternate; }
+    .slide img  { animation: slide 2s ease-in-out infinite alternate; }
+    .shake img  { animation: shake 1.5s infinite; }
+    .pulse img  { animation: pulse 2s infinite; }
+    .flip img   { animation: flip 4s infinite linear; }
+    .glow img   { animation: glow 2s infinite alternate; }
+    .spin img   { animation: spin 6s infinite linear; }
+    .wave img   { animation: wave 2s infinite; }
+
+  </style>
+</head>
+<body>
+  <h1>Image Animation Gallery</h1>
+
+  <div class="gallery">
+    <div class="card bounce">
+      <img src="https://picsum.photos/200/200?1" alt="Bounce">
+      <div class="title">Bounce</div>
+    </div>
+
+    <div class="card rotate">
+      <img src="https://picsum.photos/200/200?2" alt="Rotate">
+      <div class="title">Rotate</div>
+    </div>
+
+    <div class="card zoom">
+      <img src="https://picsum.photos/200/200?3" alt="Zoom">
+      <div class="title">Zoom</div>
+    </div>
+
+    <div class="card fade">
+      <img src="https://picsum.photos/200/200?4" alt="Fade">
+      <div class="title">Fade</div>
+    </div>
+
+    <div class="card slide">
+      <img src="https://picsum.photos/200/200?5" alt="Slide">
+      <div class="title">Slide</div>
+    </div>
+
+    <div class="card shake">
+      <img src="https://picsum.photos/200/200?6" alt="Shake">
+      <div class="title">Shake</div>
+    </div>
+
+    <div class="card pulse">
+      <img src="https://picsum.photos/200/200?7" alt="Pulse">
+      <div class="title">Pulse</div>
+    </div>
+
+    <div class="card flip">
+      <img src="https://picsum.photos/200/200?8" alt="Flip">
+      <div class="title">Flip</div>
+    </div>
+
+    <div class="card glow">
+      <img src="https://picsum.photos/200/200?9" alt="Glow">
+      <div class="title">Glow</div>
+    </div>
+
+    <div class="card spin">
+      <img src="https://picsum.photos/200/200?10" alt="Spin">
+      <div class="title">Spin</div>
+    </div>
+
+    <div class="card wave">
+      <img src="https://picsum.photos/200/200?11" alt="Wave">
+      <div class="title">Wave</div>
+    </div>
+  </div>
+</body>
+</html>
